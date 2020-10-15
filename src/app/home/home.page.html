@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    
+    <ion-title class = "encabezado">
+  PACIENTES
+    </ion-title>  
+    <div class = "encabezado">
+      <ion-icon class="tamañoImg" name="people-outline"></ion-icon>
+    </div>   
+  </ion-toolbar>
+</ion-header>
+ 
+
+<ion-content [fullscreen]="true">
+  <ion-item >
+  <ion-label class = "titulos">Nombre de paciente</ion-label>
+  <ion-label class = "titulos">ID de paciente</ion-label>
+  </ion-item>
+  <ion-list>
+    <ion-item class="valores" *ngFor="let paciente of pacientes" [routerLink]="['/home',paciente.id]" >
+      <ion-label>{{paciente.apellido}}   {{paciente.nombre}} <ion-label *ngIf="paciente.numeroSesionesRealizadas == 0" color="danger" size='small'>Sin Sesiones</ion-label></ion-label>
+      
+      <ion-label >{{paciente.id}}</ion-label>
+      
+    </ion-item>
+    <ion-item>   
+      <ion-button expand="block"  [routerLink]="['/login']" >
+        <ion-icon slot="start" name="person-add-outline" ></ion-icon>
+        Agregar nuevo paciente
+      </ion-button>
+    </ion-item> 
+    <ion-item>  
+      <ion-label>Ingrese el ID a eliminar : </ion-label>
+      <ion-input position="floating" [(ngModel)]="idBorrar" ></ion-input>
+      <ion-button color="primary" expand="block" (click)="borrar(idBorrar)">
+         <ion-icon slot="icon-only" name="person-remove-outline" position="end"></ion-icon>
+      </ion-button>
+      
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
+
+  
+
+

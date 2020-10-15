@@ -1,0 +1,27 @@
+.tamañoImg{
+    height: 100px;
+    width: 100px;
+}
+.contenedor{
+    
+    display: flex;
+    flex-direction : row;
+    justify-content : center;
+    align-items: baseline;
+}
+.titulo{
+    text-align: center;
+    color: darkblue;
+    font-size: large;
+    text-transform: uppercase;
+    font: 'arial';
+    
+ }
+ .textonormal{
+    text-align: center;
+    color:black;
+    font-size: large;
+    text-transform: uppercase;
+    font: 'arial';
+    
+ }

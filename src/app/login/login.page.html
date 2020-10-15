@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+     LOGIN
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-item>
+  <ion-label position="floating">Nombre<ion-text color="danger">*</ion-text> </ion-label>
+  <ion-input [(ngModel)]="paciente.nombre" ></ion-input> 
+</ion-item> 
+<ion-item>
+  <ion-label position="floating">Apellido<ion-text color="danger">*</ion-text> </ion-label>
+  <ion-input [(ngModel)]="paciente.apellido" ></ion-input> 
+</ion-item>  
+<ion-item>
+  <ion-label position="floating">ID<ion-text color="danger">*</ion-text></ion-label>
+  <ion-input [(ngModel)]="paciente.id"  ></ion-input>
+</ion-item>  
+<ion-item>
+  <ion-label position="floating">Edad <ion-text color="danger">*</ion-text></ion-label>
+  <ion-input [(ngModel)]="paciente.edad"  ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-radio-group [(ngModel)]="paciente.sexo">
+    <ion-label position="fixed"> Sexo </ion-label>
+    <ion-item>
+      <ion-label>Femenino</ion-label>
+      <ion-radio slot="start" value="Femenino"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Masculino</ion-label>
+      <ion-radio slot="start" value="Masculino"></ion-radio>
+      </ion-item>
+  </ion-radio-group>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Peso <ion-text color="danger">*</ion-text></ion-label>
+  <ion-input [(ngModel)]="paciente.peso" type="number" ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Patologia Previa <ion-text color="danger">*</ion-text></ion-label>
+  <ion-input [(ngModel)]="paciente.patologiaPrevia"  ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Fecha de Ingreso <ion-text color="danger">*</ion-text></ion-label>
+  <ion-input [(ngModel)]="paciente.fechaIngreso"  ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Cantidad de Sesiones Realizadas <ion-text color="danger">*</ion-text></ion-label>
+  <ion-input [(ngModel)]="paciente.numeroSesionesRealizadas" type="number" ></ion-input>
+</ion-item>
+<ion-button (click)="guardar()" color="primary" expand="block">Guardar</ion-button>
+</ion-content>
+

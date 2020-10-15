@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="contenedor">
+    <ion-title class="titulo">Sesiones Realizadas</ion-title>
+    </div>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/paciente/{{sesiones.id}}"></ion-back-button>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+    <ion-item>
+      <ion-label class="titulos">Fechas de Sesiones</ion-label>
+    </ion-item>
+ 
+  <ion-list>
+    <ion-item *ngFor="let sesion of sesiones" [routerLink]="['/sesiones',sesion.id , sesion.fecha]">
+      <ion-label class="valores">{{sesion.fecha}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
