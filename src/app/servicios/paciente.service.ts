@@ -188,7 +188,7 @@ private sesiones: Array <Sesion> =[{
   }
 
   public agregar(paciente: Paciente) {
-    // this.paciente.push(paciente);
+    // this.paciente.post(paciente);
    
    }
    public eliminar(id:string){
